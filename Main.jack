@@ -1,0 +1,33 @@
+class Main{
+    function int getsumofsqDigits(int n){
+        var int r;
+        if(n <10){
+            return n*n;
+        }
+        let r=n-((n/10)*10);
+        return (r*r)+ Main.getsumofsqDigits(n/10);
+    }
+
+    function void main(){
+        var int num,digit;
+        var boolean flag;
+        let flag=true;
+
+        let num = Keyboard.readInt("Enter the number: ");
+        while(flag){
+            let num=Main.getsumofsqDigits(num);
+            do Output.printInt(num);
+            do Output.printString(" ");
+            if(num < 9){
+                let flag=false;
+            }
+        }
+
+        if(num=1){
+            do Output.printString("Perfect Number");
+        }else{
+            do Output.printString("Not Perfect.Its OK noone is 100% perfect.!!");
+        }
+        return;
+    }
+}
