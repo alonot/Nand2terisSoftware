@@ -1,0 +1,10 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="Assembler" type="Application" factoryName="Application">
+    <option name="MAIN_CLASS_NAME" value="Assembler" />
+    <module name="Nand2TerisSoftwares" />
+    <option name="PROGRAM_PARAMETERS" value=".\Tests\Tests.asm" />
+    <method v="2">
+      <option name="Make" enabled="true" />
+    </method>
+  </configuration>
+</component>

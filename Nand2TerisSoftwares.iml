@@ -5,6 +5,7 @@
     <content url="file://$MODULE_DIR$">
       <sourceFolder url="file://$MODULE_DIR$/Assembler" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Compiler" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Tests" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/VMT" isTestSource="false" />
     </content>
     <orderEntry type="inheritedJdk" />

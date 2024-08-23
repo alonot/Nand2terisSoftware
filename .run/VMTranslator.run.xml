@@ -1,0 +1,10 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="VMTranslator" type="Application" factoryName="Application" nameIsGenerated="true">
+    <option name="MAIN_CLASS_NAME" value="VMTranslator" />
+    <module name="Nand2TerisSoftwares" />
+    <option name="PROGRAM_PARAMETERS" value=".\Tests\" />
+    <method v="2">
+      <option name="Make" enabled="true" />
+    </method>
+  </configuration>
+</component>
