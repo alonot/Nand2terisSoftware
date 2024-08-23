@@ -1,9 +1,9 @@
-package Assembler;
+
 
 import java.io.File;
 import java.util.Scanner;
 
-public class Parser {
+public class AssemblyParser {
 
     private File file;
     private Scanner Sc;
@@ -12,7 +12,7 @@ public class Parser {
     private int symbol_mem=16;
     private int instruction_line=0;
 
-    public Parser(File in_file){
+    public AssemblyParser(File in_file){
         file=in_file;
         try {
             Sc=new Scanner(file);

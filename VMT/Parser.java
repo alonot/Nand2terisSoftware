@@ -1,4 +1,4 @@
-package VMT;
+
 
 import java.io.File;
 import java.util.Scanner;
@@ -91,11 +91,10 @@ public class Parser {
     }
 
 
-    String getCode(){
-        String code="";
+    void getCode(){
         while(hasMoreLines()){
             advance();
-            System.out.println(nextcommand);
+//            System.out.println(nextcommand);
             commandTypes comType=commandType();
             String arg1="";
             if(comType!=commandTypes.C_RETURN)
@@ -134,9 +133,6 @@ public class Parser {
                 default:
             }
         }
-        
-        code+="(END)\n@END\n0;JMP\n";
-        return code;
     }
 
 }

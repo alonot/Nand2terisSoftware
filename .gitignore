@@ -1,0 +1,5 @@
+*/Tests.asm
+*/Tests.hack
+/Tests/*.vm
+.idea/
+out/

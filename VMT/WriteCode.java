@@ -1,9 +1,7 @@
-package VMT;
 
-import VMT.Parser.commandTypes;
+
 import java.io.File;
 import java.io.FileWriter;
-
 
 public class WriteCode {
     private String fileName="";
@@ -53,7 +51,7 @@ public class WriteCode {
     }
    
 
-    public void writePushPop(commandTypes command,String segment,int index){
+    public void writePushPop(Parser.commandTypes command, String segment, int index){
         String output="";String seg="";
 
         switch (segment) {
@@ -140,7 +138,7 @@ public class WriteCode {
 
     public void writeLabel(String label){
         String output="";
-        System.out.println(label);
+//        System.out.println(label);
         //04912566321
         output=String.format("(%s$%s)\n",function_Name,label);
 
@@ -165,7 +163,7 @@ public class WriteCode {
 
     public void writeFunction(String functionName,int nVar){
         StringBuilder output= new StringBuilder();
-        System.out.println(functionName);
+//        System.out.println(functionName);
         function_Name=functionName;
 
         output = new StringBuilder(String.format("(%s)\n", this.function_Name));

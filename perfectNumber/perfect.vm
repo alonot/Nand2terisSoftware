@@ -1,0 +1,92 @@
+//-->
+function Main.getsumofsqDigits 1
+push argument 0
+push constant 10
+sub
+if-goto TRUE$1
+goto FALSE$1
+label TRUE$1
+push argument 0
+return
+goto CONTINUE$1
+label FALSE$1
+goto CONTINUE$1
+label CONTINUE$1
+push argument 0
+//((n/10)*10) \||/
+push argument 0
+push constant 10
+call Math.divide 2
+push constant 10
+call Math.multiply 2
+sub
+pop local 0
+// return \|/
+push local 0
+push local 0 
+call Math.multiply 2
+// call getsumofsqDigits
+push argument 0
+push constant 10
+call Math.divide 2
+call Main.getsumofsqDigits 1
+add
+return
+// End of getsumofsqDigits function 
+
+//-->
+function Main.main 2
+push temp 0
+pop local 0     //n=RAM[R5]
+push constant 1
+neg
+pop local 1     // flag = true
+label WHILE$1
+push local 1
+if-goto WHILETRUE$1
+goto WHILEEND$1
+label WHILETRUE$1
+//
+push local 0
+call Main.getsumofsqDigits 1
+pop local 0
+push local 0
+push constant 10
+lt
+if-goto TRUE$3
+goto FALSE$3
+label TRUE$3
+//
+    push constant 0
+    pop local 1
+//
+goto CONTINUE$3
+label FALSE$3
+label CONTINUE$3
+
+//
+goto WHILE$1
+label WHILEEND$1
+push local 0
+push constant 1 
+eq
+if-goto TRUE$2
+goto FALSE$2
+label TRUE$2
+//
+    push constant 1
+    neg
+    pop temp 1
+//
+goto CONTINUE$2
+label FALSE$2
+//
+    push constant 0
+    pop temp 1
+//
+goto CONTINUE$2
+label CONTINUE$2
+push constant 0
+return
+// END Of Main.main function
+

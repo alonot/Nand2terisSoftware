@@ -9,7 +9,7 @@ class Main{
     }
 
     function void main(){
-        var int num,digit;
+        var int num;
         var boolean flag;
         let flag=true;
 

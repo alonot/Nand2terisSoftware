@@ -1,4 +1,3 @@
-package Assembler;
 import java.util.HashMap;
 
 public class Symbol_table {
